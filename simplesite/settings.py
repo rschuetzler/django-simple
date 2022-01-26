@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "movies.apps.MoviesConfig",
     "users.apps.UsersConfig",
     "crispy_forms",
+    "rest_framework",
 ]
 
 MIDDLEWARE = [

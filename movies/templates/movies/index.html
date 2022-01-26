@@ -1,0 +1,8 @@
+{% extends 'movies/base.html' %} {% block title %} Latest Movies {% endblock %} 
+{% block content %}
+<ul>
+{% for movie in latest_movie_list %}
+<li><a href="{% url "movies:detail" movie.id %}">{{ movie.title }}</a></li>
+{% endfor %}
+</ul>
+{% endblock %}

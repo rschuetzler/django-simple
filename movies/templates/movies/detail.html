@@ -1,0 +1,16 @@
+{% extends 'movies/base.html' %} {% block title %} {{ movie.title }} {% endblock %} 
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>{{ movie.title }} ({{ movie.year }})</h1>
+      <p>{{ movie.description }}</p>
+      <p>{{ message }}</p>
+      {% if movie.poster %}
+      <img src="{{ movie.poster }}" class="img-responsive" width="300" />
+      {% endif %} 
+      
+    </div>
+  </div>
+</div>
+{% endblock %}

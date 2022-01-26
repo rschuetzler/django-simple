@@ -10,9 +10,11 @@ class IndexView(generic.ListView):
     context_object_name = "latest_movie_list"
 
     def get_queryset(self):
-        return Movie.objects.order_by("-year")[:10]
+        return Movie.objects.order_by("-year")[:50]
 
 
 class DetailView(generic.DetailView):
     model = Movie
     template_name = "movies/detail.html"
+
+

@@ -1,2 +1,7 @@
-{% load crispy_forms_tags %} 
-{% crispy form %}
+{% block title %}Add a movie (GET){% endblock %}
+
+{% block content %}
+<form action="{% url "movies:submitget" %}" method="get">
+    
+</form>
+{% endblock %}
