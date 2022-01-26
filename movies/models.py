@@ -16,7 +16,7 @@ class Movie(models.Model):
 class Actor(models.Model):
     name = models.CharField(max_length=100)
     imdb_page = models.URLField()
-    was_in = models.ManyToManyField(Movie, related_name="actors")
+    was_in = models.ManyToManyField("Movie", related_name="actors")
 
     def __str__(self):
         return self.name
